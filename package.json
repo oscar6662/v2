@@ -1,0 +1,48 @@
+{
+  "name": "vef2-2021-v2",
+  "version": "1.0.0",
+  "description": "[Kynning í fyrirlestri](https://youtu.be/).",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "sass": "node-sass --source-map-embed styles/styles.scss -o public/css ",
+    "sass-watch": "npm run sass && node-sass --source-map-embed --watch styles/styles.scss -o public/css",
+    "lint": "stylelint styles/config.scss styles/footer.scss styles/grid.scss styles/main.scss styles/myndbond.scss styles/styles.scss styles/video.scss",
+    "esLint": "npx eslint src/app.js src/videos.js",
+    "install": "npm install --save-dev node babel browser-sync concurrently eslint node-sass rollup stylelint stylelint-config-sass-guidelines stylelint-config-standard eslint-config-airbnb eslint-plugin-import",
+    "start": "cd src && node app.js",
+    "test": "npm run esLint && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oscar6662/v2.git"
+  },
+  "author": "Óskar Helgi Berenguer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oscar6662/v2/issues"
+  },
+  "homepage": "https://github.com/oscar6662/v2#readme",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "browser-sync": "^2.26.14",
+    "concurrently": "^5.3.0",
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "node": "^15.7.0",
+    "node-sass": "^5.0.0",
+    "rollup": "^2.38.5",
+    "stylelint": "^13.9.0",
+    "stylelint-config-sass-guidelines": "^7.1.0",
+    "stylelint-config-standard": "^20.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "pg": "^8.5.1",
+    "require": "^2.4.20",
+    "utf8": "^3.0.0"
+  }
+}

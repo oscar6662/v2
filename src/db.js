@@ -1,15 +1,11 @@
-import pg from 'pg';
-import dotenv from 'dotenv';
+const Pool = require("pg").Pool;
 
-dotenv.config();
+const pool = new Pool({
+  user: "postgres",
+  password: "sabadell",
+  host: "localhost",
+  port: 5432,
+  database: "vef2-2021-v2"
+});
 
-const {
-  DATABASE_URL: connectionString,
-} = process.env;
-
-if (!connectionString) {
-  console.error('Vantar DATABASE_URL');
-  process.exit(1);
-}
-
-// TODO gagnagrunnstengingar
+module.exports = pool;
