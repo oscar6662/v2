@@ -8,7 +8,6 @@
     "sass-watch": "npm run sass && node-sass --source-map-embed --watch styles/styles.scss -o public/css",
     "lint": "stylelint styles/config.scss styles/grid.scss styles/main.scss styles/styles.scss styles/error.scss",
     "esLint": "npx eslint src/app.js src/db.js src/registration.js",
-    "install": "npm install --save-dev node babel concurrently eslint node-sass stylelint stylelint-config-sass-guidelines stylelint-config-standard eslint-config-airbnb eslint-plugin-import pg dotenv express path body-parser utf8 ejs",
     "start": "node ./src/app.js",
     "test": "npm run lint && npm run esLint"
   },
