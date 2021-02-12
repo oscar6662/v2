@@ -1,7 +1,6 @@
 const pg = require('pg');
 const dotenv = require('dotenv');
 
-
 dotenv.config();
 
 const {
@@ -10,7 +9,6 @@ const {
 } = process.env;
 
 console.log('process.env :>> ', process.env.DATABASE_URL);
-
 
 if (!connectionString) {
   console.error('Vantar DATABASE_URL');
