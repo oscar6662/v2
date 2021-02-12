@@ -7,7 +7,7 @@
     "sass": "node-sass --source-map-embed styles/styles.scss -o public/css ",
     "sass-watch": "npm run sass && node-sass --source-map-embed --watch styles/styles.scss -o public/css",
     "lint": "stylelint styles/config.scss styles/footer.scss styles/grid.scss styles/main.scss styles/myndbond.scss styles/styles.scss styles/video.scss",
-    "esLint": "npx eslint src/app.js src/videos.js",
+    "esLint": "npx eslint src/app.js src/db.js src/registration.js",
     "install": "npm install --save-dev node babel browser-sync concurrently eslint node-sass rollup stylelint stylelint-config-sass-guidelines stylelint-config-standard eslint-config-airbnb eslint-plugin-import",
     "start": "cd src && node app.js",
     "test": "npm run esLint && npm run lint"
@@ -37,6 +37,7 @@
     "stylelint-config-standard": "^20.0.0"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
