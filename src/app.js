@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 const utf8 = require('utf8');
 const pool = require('./db');
 const reg = require('./registration');
+
 dotenv.config();
 const {
   PORT: port = 3000,
