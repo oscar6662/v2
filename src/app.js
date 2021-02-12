@@ -1,11 +1,11 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const dotenv = require('dotenv').config();
+const dotenv = require('dotenv');
 const utf8 = require('utf8');
 const pool = require('./db');
 const reg = require('./registration');
-
+dotenv.config();
 const {
   PORT: port = 3000,
 } = process.env;

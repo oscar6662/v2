@@ -1,11 +1,21 @@
-const Pool = require('pg').Pool;
+const pg = require('pg');
+const dotenv = require('dotenv');
 
-const pool = new Pool({
-  user: 'postgres',
-  password: 'sabadell',
-  host: 'localhost',
-  port: 5432,
-  database: 'vef2-2021-v2',
-});
+
+dotenv.config();
+
+const {
+  DATABASE_URL: connectionString,
+  NODE_ENV: nodeEnv = 'development',
+} = process.env;
+
+if (!connectionString) {
+  console.error('Vantar DATABASE_URL');
+  process.exit(1);
+}
+
+const ssl = nodeEnv !== 'development' ? { rejectUnauthorized: false } : false;
+
+const pool = new pg.Pool({ connectionString, ssl });
 
 module.exports = pool;
