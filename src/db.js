@@ -9,6 +9,9 @@ const {
   NODE_ENV: nodeEnv = 'development',
 } = process.env;
 
+console.log('process.env :>> ', process.env.DATABASE_URL);
+
+
 if (!connectionString) {
   console.error('Vantar DATABASE_URL');
   process.exit(1);
