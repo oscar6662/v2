@@ -7,9 +7,10 @@
     "sass": "node-sass --source-map-embed styles/styles.scss -o public/css ",
     "sass-watch": "npm run sass && node-sass --source-map-embed --watch styles/styles.scss -o public/css",
     "lint": "stylelint styles/config.scss styles/grid.scss styles/main.scss styles/styles.scss styles/error.scss",
-    "esLint": "npx eslint src/app.js src/db.js src/registration.js",
+    "esLint": "npx eslint src/app.js src/db.js src/registration.js src/setup.js",
     "start": "node ./src/app.js",
-    "test": "npm run lint && npm run esLint"
+    "test": "npm run lint && npm run esLint",
+    "setup": "node ./src/setup.js"
   },
   "repository": {
     "type": "git",

@@ -34,7 +34,7 @@ app.post('/', async (req, res) => {
     const usrdata = req.body;
     const possibleerrors = await reg.register(usrdata);
     if (possibleerrors[3] && !possibleerrors[0] && !possibleerrors[1] && !possibleerrors[2]) {
-      res.render('error', { url: 'Not Found' });
+      res.render('regerrors');
     } else {
       const allSignatures = await pool.query('SELECT * FROM signatures');
       utf8.decode(allSignatures);

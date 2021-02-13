@@ -1,10 +1,10 @@
 # Undirskriftarlista
 
-* You shall have a database with a table named "signatures" and at least the columns "name", "nationalid", "athugasemder", "anonymous".
+* You shall have a database readddy
 * Create a .env file in the root folder with DATABASE_URL = [URL]
-* run "npm run install"
-* run "npm run setup"
-* run "npm run start"
-* run "npm run test"
+* run "npm install" to install all required dependencies
+* run "npm run setup" to create the table
+* run "npm run start" to start the web on PORT 3000
+* run "npm run test" to check I didn't make (hopefully) any mistakes
 * You can find a sample of the working page https://undirskriftarlista.herokuapp.com
 
